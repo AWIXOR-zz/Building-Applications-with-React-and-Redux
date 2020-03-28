@@ -1,3 +1,3 @@
 export function createCourse(course) {
-  return { tupe: "CREATE_COURSE", course };
+  return { type: "CREATE_COURSE", course };
 }
