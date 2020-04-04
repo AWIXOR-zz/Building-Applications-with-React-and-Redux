@@ -6,16 +6,16 @@ import * as courseActions from "../../redux/actions/courseActions";
 class CoursesPage extends Component {
   state = {
     course: {
-      title: ""
-    }
+      title: "",
+    },
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     const course = { ...this.state.course, title: event.target.value };
     this.setState({ course });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.props.actions.createCourse(this.state.course);
   };
@@ -30,7 +30,7 @@ class CoursesPage extends Component {
           value={this.state.course.title}
         />
         <input type="submit" value="Save" />
-        {this.props.courses.map(course => (
+        {this.props.courses.map((course) => (
           <div key={course.title}>{course.title}</div>
         ))}
       </form>
@@ -45,7 +45,7 @@ class CoursesPage extends Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(courseActions.dispatch)
+    actions: bindActionCreators(courseActions, dispatch),
   };
 }
 // const mapDispatchToProps = {
@@ -54,7 +54,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
-    courses: state.courses
+    courses: state.courses,
   };
 }
 
