@@ -1,6 +1,6 @@
 import * as types from "../actions/actionTypes";
-
-export default function courseResucer(state = [], action) {
+import initialState from "./initialState";
+export default function courseResucer(state = initialState.courses, action) {
   switch (action.type) {
     case types.CREATE_COURSE:
       return [...state, { ...action.course }];
