@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const CourseList = ({ courses }) => (
@@ -36,8 +36,8 @@ const CourseList = ({ courses }) => (
   </table>
 );
 
-CourseList.propTypes = {
-  courses: PropTypes.array.isRequired,
-};
+// CourseList.propTypes = {
+//   courses: PropTypes.array.isRequired,
+// };
 
 export default CourseList;

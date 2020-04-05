@@ -7,6 +7,7 @@ export function createCourse(course) {
 export function loadCourseSuccess(courses) {
   return { type: types.LOAD_COURSES_SUCCESS, courses };
 }
+
 export function loadCourses() {
   return function (dispatch) {
     return courseApi
