@@ -30,10 +30,21 @@ function ManageCoursePage({
     }
   }, []);
 
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setCourse((prevCourse) => ({
+      ...prevCourse,
+      [name]: name === "authorId" ? parseInt(value, 10) : value,
+    }));
+  }
+
   return (
-    <div>
-      <CourseForm course={course} error={error} authors={authors} />
-    </div>
+    <CourseForm
+      course={course}
+      error={error}
+      authors={authors}
+      onChange={handleChange}
+    />
   );
 }
 

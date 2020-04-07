@@ -3,7 +3,7 @@ import React from "react";
 const SelectInput = ({
   name,
   label,
-  onCahnge,
+  onChange,
   defaultOption,
   value,
   options,
@@ -16,7 +16,7 @@ const SelectInput = ({
         <select
           name={name}
           value={value}
-          onChange={onCahnge}
+          onChange={onChange}
           className="form-control"
         >
           <option value="">{defaultOption}</option>
